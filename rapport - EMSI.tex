@@ -1,0 +1,471 @@
+%% @Author: Ayoub Fentis
+%  @Date:   2024-05
+%% @Class:  PFE de l'EMSI - Honoris United Universities, Maroc.
+
+\documentclass[a4paper, oneside, 12pt, final]{extreport}
+\usepackage{graphicx}
+
+\parindent 0cm
+\usepackage{makeidx}
+\makeindex
+
+\usepackage[lined,boxed,commentsnumbered, french, ruled,vlined,linesnumbered]{algorithm2e}
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{exemple}{Example}[chapter]
+
+
+%\usepackage[nottoc]{tocbibind}
+%\addcontentsline{toc}{section}{References}
+
+\providecommand{\keywords}[1]{\textbf{\textit{Mots clés---}} #1}
+\providecommand{\keywordss}[1]{\textbf{\textit{Keywords---}} #1}
+
+\usepackage{etoolbox}
+%\makeatletter
+%\patchcmd{\thebibliography}{%
+%  \chapter*{\bibname}\@mkboth{\MakeUppercase\bibname}%{\MakeUppercase\bibname}}{%
+%  \section{References}}{}{}
+%\makeatother
+
+
+
+\usepackage[nottoc]{tocbibind}
+
+\textwidth 18cm
+\textheight 24cm
+\topmargin -0.5cm
+\oddsidemargin -1cm
+
+% set font encoding for PDFLaTeX or XeLaTeX
+\usepackage{ifxetex}
+\ifxetex
+  \usepackage{fontspec}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{lmodern}
+\fi
+
+
+% Enable SageTeX to run SageMath code right inside this LaTeX file.
+% documentation: http://mirrors.ctan.org/macros/latex/contrib/sagetex/sagetexpackage.pdf
+%\usepackage{sagetex}
+
+
+\newcommand{\reportTitle} {%
+  %\textsc{Graduation Project Report}
+  \textsc{Projet de Fin d'\'etudes}
+}
+
+\newcommand{\reportAuthor} {%
+  Benhraaddi \textsc{Othmane } \\
+  Elmakhantar \textsc{Ibrahim }%
+}
+
+\newcommand{\reportSubject} {%
+ Projet «Safari» Blog Application
+}
+
+\newcommand{\dateSoutenance} {%
+  12/06/2018%
+}
+
+\newcommand{\studyDepartment} {%
+  2023/2024%Statistique
+}
+
+
+\newcommand{\EMSI} {%
+  Ecole Marocaine des Sciences de l'Ing\'enieur
+}
+
+%\newcommand{\codePFE} {% Reference
+%  Code PFE%
+%}
+
+%\newcommand{\juryPresident} {%
+%  Mr Ben Foulen \textsc{Foulenia}%
+%}
+%\newcommand{\juryPresidentDesc} {%
+%  Pr\'esident%
+%}
+
+\newcommand{\juryMemberOne} {%
+Mme Hassna  \textsc{Bensag}%
+}
+\newcommand{\juryMemberOneDesc} {%
+  Encadrante Académique%Mentor
+}
+
+%\newcommand{\juryMemberTwo} {%
+ % Mr Ben Foulen \textsc{Fouleni}%
+%}
+\newcommand{\juryMemberTwoDesc} {%
+  Encadrant Entreprise% Examiner, Reporter
+}
+
+%\newcommand{\juryMemberThree} {%
+%	M. Ben Foulen \textsc{Fouleni}%
+%}
+%\newcommand{\juryMemberThreeDesc} {%
+%	Rapporteur% Examiner, Reporter
+%}
+%
+%\newcommand{\juryMemberFour} {%
+%	M. Ben Foulen \textsc{Fouleni}%
+%}
+%\newcommand{\juryMemberFourDesc} {%
+%	Mentor% Examiner, Reporter
+%}
+
+
+\newcommand{\specialcell}[1]{%
+  \begin{tabularx}{\textwidth}{@{}X@{}}#1\end{tabularx}%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Add your own commands here
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\MyCommand} {%
+  Does nothing really%
+}
+
+
+% used in maketitle
+\title{\reportSubject}
+\author{\reportAuthor}
+
+% Enable SageTeX to run SageMath code right inside this LaTeX file.
+% documentation: http://mirrors.ctan.org/macros/latex/contrib/sagetex/sagetexpackage.pdf
+%\usepackage{sagetex}
+
+%\hypersetup{
+%  pdftitle={\reportTitle~-~\reportSubject},%
+%  pdfauthor={\reportAuthor},%
+%  pdfsubject={\reportSubject},%
+%  pdfkeywords={report} {internship} {pfe} {enis}
+%}
+
+\usepackage{graphics}
+\usepackage{graphicx}
+
+
+\usepackage[acronym,toc,section=chapter]{glossaries}
+\makeglossaries
+
+\newacronym{abc}{ABC}{A contrived acronym}
+\newacronym{efg}{EFG}{Another acronym}
+\newacronym{svm}{SVM}{Support Vector Machines}
+
+\pagenumbering{roman} 
+
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+
+\begin{document}
+
+\thispagestyle{empty}
+\begin{titlepage}
+\begin{center}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% THE HEADER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+{%
+  \fontsize{9pt}{9pt}\selectfont%
+  \begin{tabular}{c}
+    Honoris united universities - \EMSI{} \\
+  \end{tabular}
+}
+
+\vspace{1cm}
+
+\includegraphics[scale=.5]{EMSI_logo2.png}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% THE PAGE CONTENT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vspace{30pt} {%
+  \renewcommand*{\familydefault}{\defaultFont}
+  \fontsize{46pt}{46pt}\selectfont%
+  % MEMOIRE\\%
+  %\reportTitle{}%\\\textsc{Report}\\%
+}
+
+
+\vspace{10pt}
+\textbf{\textit{Projet Fin d'année}}
+
+
+\vspace{30pt}
+\textbf{\textit{Réalisé par}}\\
+\vspace{10pt} {%
+  \fontsize{18pt}{18pt}\selectfont%
+  \textbf{\reportAuthor}\\
+}%
+
+\vspace{10pt} {%
+  \renewcommand*{\familydefault}{\defaultFont}
+  \fontsize{27pt}{27pt}\selectfont%
+  \rule{0.5\textwidth}{.4pt}\\
+  \vspace{10pt}
+  \reportSubject{}\\%
+  \vspace{10pt}
+  \rule{0.5\textwidth}{.4pt}
+}
+
+%\vspace{5pt}
+%Soutenu le\, \dateSoutenance\,\, devant le Jury compos\'e de :\\
+%Soutenu le \dateSoutenance, devant la commission d'examen:\\
+
+\vspace{10pt}
+sous la direction de :\\
+\vspace{20pt}
+
+\vspace{10pt}
+\begin{tabular}{p{0.3\linewidth} p{0.3\linewidth}}
+%  \juryPresident{} & \juryPresidentDesc{}\\
+  \juryMemberOne{} & \juryMemberOneDesc{}\\
+%  \juryMemberTwo{} & \juryMemberTwoDesc{}\\
+%  \juryMemberThree{} & \juryMemberThreeDesc{}\\
+%  \juryMemberFour{} & \juryMemberFourDesc{}\\
+\end{tabular}
+
+%\vfill
+
+%\vspace{10pt}%
+%\textbf{\textit{Projet de Fin d'Etudes fait \`a}}\\
+%\vspace{5pt}
+%(\studyDepartment)\\
+%\includegraphics[scale=0.4]{logo-studyDepartment.jpg}
+%\end{center}
+%\end{titlepage}
+
+\vspace{30pt}%
+\textbf{\textit{ Année Académique}}\\
+
+\vspace{10pt}
+(\studyDepartment)\\
+%\includegraphics[width=4cm, height=2.5cm]{logo-entreprise.jpg}
+\end{center}
+\end{titlepage}
+
+% ###############################
+% # HELP COMMANDS               #
+% ###############################
+%
+% -1 \part{part}
+%  0 \chapter{chapter}
+%  1 \section{section}
+%  2 \subsection{subsection}
+%  3 \subsubsection{subsubsection}
+%  4 \paragraph{paragraph}
+%  5 \subparagraph{subparagraph}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dédicace et Remerciements
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\chapter*{Dedication}
+\chapter*{D\'edicace}
+%\addcontentsline{toc}{chapter}{Dedication}
+\thispagestyle{empty}
+%
+%For all they have endured to satisfy all my needs and wishes
+
+\begin{center}
+{\it 
+	
+\vspace{1cm}\vspace{1cm}\vspace{1cm}\vspace{1cm}
+A nos chers parents \\ 
+Malika \& Mhamed  \\
+Fatna \& Abdelali \\
+ \vspace{1cm}
+Autant de phrases et d’expressions aussi éloquentes soient
+elles ne sauraient exprimer notre gratitude et 
+reconnaissance. Vous avez su nous inculquer le sens de la 
+responsabilité, de la confiance en soi, l’optimisme face aux 
+difficultés de la vie. Vos conseils ont toujours guidé nos pas 
+vers la réussite. Votre patience sans fin, votre compréhension 
+et votre encouragement sont pour nous le soutien 
+indispensable que vous avez toujours sur nous l’apporter. nous 
+vous devons ce qu'on ait aujourdhui et ce qu'on serait demain et 
+on fera toujours de mon mieux pour rester votre fierté et ne 
+jamais vous décevoir. \\ 
+\vspace{1cm}
+Qu’Allah, le tout puissant, vous 
+préserve, vous accorde santé, bonheur, quiétude de l’esprit et 
+vous protège de tout mal. 
+}
+\end{center}
+%
+%\nopagebreak{%
+% And maybe a quote here
+% \raggedright\hspace{5.75cm} To all of you,~\\
+%\raggedright\hspace{7.75cm} I dedicate this work.
+%  \raggedleft\normalfont\large\itshape{} \reportAuthor\par%
+%}
+%
+%\cleardoublepage%
+
+%\chapter*{Thanks}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Divers chapitres
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tableofcontents
+%\addcontentsline{toc}{chapter}{\contentsname}
+
+\listoffigures
+%\addcontentsline{toc}{chapter}{Liste des Figures}
+\listoftables
+%\addcontentsline{toc}{chapter}{Liste des Tableaux}
+
+\addcontentsline{toc}{chapter}{Liste des algorithmes}
+\cleardoublepage
+
+\newpage
+\pagenumbering{arabic}
+\chapter*{Resumé}
+\label{chap:general_intorduction}
+\input{introduction.tex}
+
+
+\chapter{ INTRODUCTION }%
+\label{chap1:chapterone}
+\input{chapitre1.tex}
+
+\chapter{ Cahier de charge - "Safari"  }%
+\label{chap2:chapterone}
+\input{chapitre2.tex}
+
+
+
+
+
+\chapter{ Analyse et lecture - "Safari"  }%
+\label{chap:3}
+\input{chapitre3.tex}
+\label{chap3:general_intorduction}
+
+
+\chapter{Conception Diagrammes UML - "Safari"  }%
+\label{chap4:introduction}
+\input{chapitre4.tex} 
+
+
+\chapter{Réalisation - "Django"  }%
+\label{chap5:introduction}
+\input{chapitre5.tex} 
+
+\label{chap:conclusion}
+
+\chapter*{Conclusion}
+\addcontentsline{toc}{chapter}{Conclusion}
+\label{chap:conclusion}
+\input{conclusion.tex} 
+
+ 
+ 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Don't touch this, it is auto generated
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\nocite{*}
+
+%\phantomsection{}
+%\addcontentsline{toc}{chapter}{Webography}
+%\printbibliography[title={Webography},type=online]
+
+%\phantomsection{}
+%\addcontentsline{toc}{chapter}{Bibliography}
+%\printbibliography[title={Bibliography},nottype=online]
+
+%\printbibheading %exemple de bibliographie divisée en sections. Pour ajouter des oeuvres non citées,utiliser \nocite
+
+%\printbibliography[keyword=pratique,heading=subbibliography,title={Théories littéraires dans les jeux vidéo}]
+%\printbibliography[keyword=litteraire,heading=subbibliography,title={Narratologie et structuralisme}]
+
+%\printbibliography[keyword=jeu,heading=subbibliography,title={\emph{Games studies}}]
+
+\bibliographystyle{apalike}
+%\bibliographystyle{plain}
+
+\bibliography{Biblio.bib}
+
+
+@book{robbins2018learning,
+  title={Learning Web Design: A Beginner's Guide to HTML, CSS, JavaScript, and Web Graphics},
+  author={Robbins, Jennifer Niederst},
+  year={2018},
+  publisher={O'Reilly Media}
+}
+
+@book{crockford2008javascript,
+  title={JavaScript: The Good Parts},
+  author={Crockford, Douglas},
+  year={2008},
+  publisher={O'Reilly Media}
+}
+
+@book{haverbeke2018eloquent,
+  title={Eloquent JavaScript: A Modern Introduction to Programming},
+  author={Haverbeke, Marijn},
+  edition={3},
+  year={2018},
+  publisher={No Starch Press}
+}
+
+@book{vincent2018django,
+  title={Django for Beginners: Build websites with Python and Django},
+  author={Vincent, William S.},
+  year={2018},
+  publisher={Independently published}
+}
+
+@book{williams2017professional,
+  title={Professional WordPress: Design and Development},
+  author={Williams, Brad and Damstra, David and Stern, Hal},
+  edition={3},
+  year={2017},
+  publisher={Wrox}
+}
+
+@book{krug2014dont,
+  title={Don't Make Me Think: A Common Sense Approach to Web Usability},
+  author={Krug, Steve},
+  edition={3},
+  year={2014},
+  publisher={New Riders}
+}
+
+
+
+
+
+
+\cleardoublepage%
+
+\addtocontents{toc}{\protect\setcounter{tocdepth}{3}}
+
+\printglossaries
+\printindex
+
+%\input{abstract}
+
+
+\end{document}
